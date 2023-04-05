@@ -5,6 +5,8 @@ Sam, Lucas, Man Him, Glen, Gharzay, Ali, Suheyb, Cormac, Kevin
 
 [The Project Website](https://magento.softwaretestingboard.com/)
 
+[Project Board](https://github.com/users/SamuelTheSpartan/projects/1/views/1)
+
 ### Deliverables 
 
 - Up to date project board  
