@@ -25,5 +25,5 @@ Sam, Lucas, Man Him, Glen, Gharzay, Ali, Suheyb, Cormac, Kevin
 
 - GitHub Action Workflows 
 
-- Present your work at 1.30  on Tuesday 11th April (everyone in the group must partake – treat like a final presentation)  
+- Present your work at 9.30am on Wednesday 12th April (everyone in the group must partake – treat like a final presentation)  
 
