@@ -13,7 +13,7 @@ Sam, Lucas, Man Him, Glen, Gharzay, Ali, Suheyb, Cormac, Kevin
 
 - Very clear Gherkin scenarios that represent the user journeys 
 
-- A  README.md that includes all your documentation of what you have tested and how to run your test framework. 
+- A README.md that includes all your documentation of what you have tested and how to run your test framework. Should also include how to use and extend your framework 
 
 - Using GitHub collaboratively 
 
@@ -23,5 +23,5 @@ Sam, Lucas, Man Him, Glen, Gharzay, Ali, Suheyb, Cormac, Kevin
 
 - GitHub Action Workflows 
 
-- Present your work at 9.30am  on Tuesday 11th April (everyone in the group must partake – treat like a final presentation)
+- Present your work at 1.30  on Tuesday 11th April (everyone in the group must partake – treat like a final presentation)  
 
