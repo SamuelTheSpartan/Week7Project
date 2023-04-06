@@ -12,21 +12,23 @@ namespace LumaAutomatedWebTestingProject.lib.pages
 {
     public class SL_LoginPage
     {
-        private IWebDriver SeleniumDriver { get; }
+        private IWebDriver _seleniumDriver;
 
         private string _loginPageUrl = AppConfigReader.LogInPageUrl;
 
-        public SL_LoginPage(IWebDriver seleniumDriver)
+        private IWebElement _userNameField => _seleniumDriver.FindElement(By.Id("email"));
+        private IWebElement _passwordField => _seleniumDriver.FindElement(By.Id("pass"));
+        private IWebElement _signInButton => _seleniumDriver.FindElement(By.Id("send2"));
+        private IWebElement _errorMessage => _seleniumDriver.FindElement(By.CssSelector(".message-error > div"));
+
+
+        public SL_LoginPage(IWebDriver driver)
         {
-            SeleniumDriver = seleniumDriver;
+            _seleniumDriver = driver;
         }
 
-        private IWebElement _userNameField => SeleniumDriver.FindElement(By.Id("email"));
-        private IWebElement _passwordField => SeleniumDriver.FindElement(By.Id("pass"));
-        private IWebElement _signInButton => SeleniumDriver.FindElement(By.Id("send2"));
-        private IWebElement _errorMessage => SeleniumDriver.FindElement(By.CssSelector(".message-error > div"));
+        public void VisitLogInPage() => _seleniumDriver.Navigate().GoToUrl(_loginPageUrl);
 
-        public void VisitLogInPage() => SeleniumDriver.Navigate().GoToUrl(_loginPageUrl);
         public void EnterUserName(string username) => _userNameField.SendKeys(username);
         public void EnterPassword(string password) => _passwordField.SendKeys(password);
 
