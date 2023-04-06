@@ -18,11 +18,17 @@ namespace LumaAutomatedWebTestingProject.lib.pages
         private IWebElement _passwordConfirmTextBox => _seleniumDriver.FindElement(By.Id("password-confirmation"));
         private IWebElement _createAccountButton => _seleniumDriver.FindElement(By.CssSelector(".submit > span"));
 
-        public SL_CreateAccountPage(IWebDriver seleniumDriver) 
+        public SL_CreateAccountPage(IWebDriver seleniumDriver)
         {
             _seleniumDriver = seleniumDriver;
         }
 
         public void EnterFirstNameTextBox(string name) => _firstNameTextBox.SendKeys(name);
+        public void EnterLastNameTextBox(string name) => _lastNameTextBox.SendKeys(name);
+        public void EnterEmailTextBox(string email) => _emailTextBox.SendKeys(email);
+        public void EnterPasswordTextBox(string password) => _passwordTextBox.SendKeys(password);
+        public void EnterPasswordConfirmationTextBox(string passwordConfirm) => _passwordConfirmTextBox.SendKeys(passwordConfirm);
+        public void CreateAccountButtonClick() => _createAccountButton.Click();
     }
+    
 }

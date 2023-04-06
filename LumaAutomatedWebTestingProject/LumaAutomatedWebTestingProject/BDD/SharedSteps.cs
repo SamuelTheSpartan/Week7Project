@@ -46,5 +46,11 @@ namespace LumaAutomatedWebTestingProject.BDD
         {
             Assert.That(SL_Website.SeleniumDriver.Url, Is.EqualTo(AppConfigReader.AccountPageUrl));
         }
+
+        [AfterScenario]
+        public void DisposedDriver()
+        {
+            SL_Website.SeleniumDriver.Quit();
+        }
     }
 }
