@@ -10,7 +10,7 @@ namespace LumaAutomatedWebTestingProject
         [Given(@"I am on the customer login page")]
         public void GivenIAmOnTheCustomerLoginPage()
         {
-            SL_LoginPage.VisitLogInPage();
+            //SL_LoginPage.VisitLogInPage();
         }
 
         [Given(@"I have entered a valid e-mail")]
