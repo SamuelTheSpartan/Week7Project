@@ -57,13 +57,13 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Given(@"I have entered a invalid First Name ""([^""]*)""")]
         public void GivenIHaveEnteredAInvalidFirstName(string p0)
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.EnterFirstNameTextBox(p0);
         }
 
         [Given(@"I have entered a invalid Last Name ""([^""]*)""")]
         public void GivenIHaveEnteredAInvalidLastName(string p0)
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.EnterLastNameTextBox(p0);
         }
 
         [Given(@"I have entered a unregistered Email")]
@@ -75,26 +75,26 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Given(@"I have entered a valid Password ""([^""]*)""")]
         public void GivenIHaveEnteredAValidPassword(string p0)
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.EnterPasswordTextBox(p0);
         }
 
         [Given(@"I have entered a valid Password Confirmation ""([^""]*)""")]
         public void GivenIHaveEnteredAValidPasswordConfirmation(string p0)
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.EnterPasswordConfirmationTextBox(p0);
         }
 
         [Then(@"I should see an error message that contains ""([^""]*)""")]
         public void ThenIShouldSeeAnErrorMessageThatContains(string p0)
         {
-            throw new PendingStepException();
+            Assert.That(p0, Is.EqualTo(SL_Website.SL_CreateAccountPage.ErrorMessageText()));
         }
 
 
         [Given(@"I have the credentials with an Invalid Password")]
         public void GivenIHaveTheCredentialsWithAnInvalidPassword(Table table)
         {
-            throw new PendingStepException();
+            //Assert.That(p0, Is.EqualTo(SL_Website.SL_CreateAccountPage.ErrorMessageText()));
         }
     }
 }
