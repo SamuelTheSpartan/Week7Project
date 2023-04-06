@@ -47,7 +47,7 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Then(@"I should land on the account page")]
         public void ThenIShouldLandOnTheAccountPage()
         {
-            throw new PendingStepException();
+            Assert.That(SL_Website.SeleniumDriver.Url, Is.EqualTo("https://magento.softwaretestingboard.com/customer/account/"));
         }
 
         [Given(@"I have entered a invalid First Name ""([^""]*)""")]
@@ -65,7 +65,7 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Given(@"I have entered a unregistered Email")]
         public void GivenIHaveEnteredAUnregisteredEmail()
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.EnterEmailTextBox(new RandomEmail().GenerateRandomEmail(randomSeed));
         }
 
         [Given(@"I have entered a valid Password ""([^""]*)""")]
@@ -86,11 +86,17 @@ namespace LumaAutomatedWebTestingProject.BDD
             throw new PendingStepException();
         }
 
+        [Then(@"I should see a password error message that contains ""([^""]*)""")]
+        public void ThenIShouldSeeAPasswordErrorMessageThatContains(string p0)
+        {
+            Assert.That(p0, Is.EqualTo(SL_Website.SL_CreateAccountPage.PasswordErrorMessageText()));
+        }
+
 
         [Given(@"I have the credentials with an Invalid Password")]
         public void GivenIHaveTheCredentialsWithAnInvalidPassword(Table table)
         {
-            throw new PendingStepException();
+            _credentials = table.CreateInstance<Credentials>();
         }
     }
 }

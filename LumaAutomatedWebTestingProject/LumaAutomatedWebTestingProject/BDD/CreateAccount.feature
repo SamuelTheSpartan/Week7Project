@@ -30,7 +30,7 @@ Scenario: Create Account with invalid First Name, Last Name and valid Email, Pas
 	And I have entered a valid Password Confirmation "Password123"
 	#id:password-confirmation
 	When I click the create an account button
-	Then I should see an error message that contains "First Name is not valid! Last Name is not valid! Last Name is not valid!"
+	Then I should see an error message that contains "First Name is not valid! Last Name is not valid!"
 
 @CreateAccount
 @Sad
@@ -41,4 +41,4 @@ Scenario: Create Account with valid First Name, Last Name and Email and Password
 	| Lucas     | Brennan  | pass     |
 	And I enter the credentials
 	When I click the create an account button
-	Then I should see an error message that contains "Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored"
+	Then I should see a password error message that contains "Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored."
