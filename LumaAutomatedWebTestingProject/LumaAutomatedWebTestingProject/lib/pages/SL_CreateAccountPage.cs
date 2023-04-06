@@ -16,7 +16,8 @@ namespace LumaAutomatedWebTestingProject.lib.pages
         private IWebElement _emailTextBox => _seleniumDriver.FindElement(By.Id("email_address"));
         private IWebElement _passwordTextBox => _seleniumDriver.FindElement(By.Id("password"));
         private IWebElement _passwordConfirmTextBox => _seleniumDriver.FindElement(By.Id("password-confirmation"));
-        private IWebElement _errorMessageBox => _seleniumDriver.FindElement(By.Id("message-error"));
+        private IWebElement _errorMessageBox => _seleniumDriver.FindElement(By.CssSelector(".message-error > div"));
+
         private IWebElement _passwordErrorMessageBox => _seleniumDriver.FindElement(By.Id("password-error"));
 
         private IWebElement _createAccountButton => _seleniumDriver.FindElement(By.CssSelector(".submit > span"));

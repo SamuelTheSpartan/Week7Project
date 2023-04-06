@@ -51,8 +51,17 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Then(@"I should land on the account page")]
         public void ThenIShouldLandOnTheAccountPage()
         {
-            Assert.That(SL_Website.SeleniumDriver.Url, Is.EqualTo(AppConfigReader.AccountPageUrl));
+
+            Assert.That(SL_Website.SeleniumDriver.Url, Is.EqualTo("https://magento.softwaretestingboard.com/customer/account/"));
+
         }
+
+        [Given(@"I have the credentials with an Invalid Password")]
+        public void GivenIHaveTheCredentialsWithAnInvalidPassword(Table table)
+        {
+            _credentials = table.CreateInstance<Credentials>();
+        }
+
 
         [Given(@"I have entered a invalid First Name ""([^""]*)""")]
         public void GivenIHaveEnteredAInvalidFirstName(string p0)
@@ -69,7 +78,7 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Given(@"I have entered a unregistered Email")]
         public void GivenIHaveEnteredAUnregisteredEmail()
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.EnterEmailTextBox(new RandomEmail().GenerateRandomEmail(randomSeed));
         }
 
         [Given(@"I have entered a valid Password ""([^""]*)""")]
@@ -89,12 +98,11 @@ namespace LumaAutomatedWebTestingProject.BDD
         {
             Assert.That(p0, Is.EqualTo(SL_Website.SL_CreateAccountPage.ErrorMessageText()));
         }
-
-
-        [Given(@"I have the credentials with an Invalid Password")]
-        public void GivenIHaveTheCredentialsWithAnInvalidPassword(Table table)
+        [Then(@"I should see a password error message that contains ""([^""]*)""")]
+        public void ThenIShouldSeeAPasswordErrorMessageThatContains(string p0)
         {
-            //Assert.That(p0, Is.EqualTo(SL_Website.SL_CreateAccountPage.ErrorMessageText()));
+            Assert.That(p0, Is.EqualTo(SL_Website.SL_CreateAccountPage.PasswordErrorMessageText()));
         }
+
     }
 }

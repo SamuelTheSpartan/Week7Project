@@ -170,7 +170,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 33
  testRunner.Then("I should see an error message that contains \"First Name is not valid! Last Name i" +
-                        "s not valid! Last Name is not valid!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                        "s not valid!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -220,8 +220,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click the create an account button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 44
- testRunner.Then("I should see an error message that contains \"Minimum length of this field must be" +
-                        " equal or greater than 8 symbols. Leading and trailing spaces will be ignored\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see a password error message that contains \"Minimum length of this field" +
+                        " must be equal or greater than 8 symbols. Leading and trailing spaces will be ig" +
+                        "nored.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
