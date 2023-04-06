@@ -23,7 +23,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="lib\pages\" />
+    <Compile Update="AppConfigReader.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Testhost.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
