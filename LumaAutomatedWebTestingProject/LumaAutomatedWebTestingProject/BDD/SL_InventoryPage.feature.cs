@@ -28,7 +28,7 @@ namespace LumaAutomatedWebTestingProject.BDD
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "InventoryPage.feature"
+#line 1 "SL_InventoryPage.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
