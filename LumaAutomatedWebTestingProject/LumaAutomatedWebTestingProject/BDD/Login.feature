@@ -6,6 +6,7 @@ I want to be able to sign in to my account
 
 @Signin
 @Happy
+#1.1
 
 Scenario: Login with valid email and valid password
 Given I am on the customer login page 
@@ -20,6 +21,7 @@ Then I should land on the account page
 
 @Signin
 @Sad
+#1.2
 
 Scenario: Login with valid email and invalid password
 Given I am on the customer login page 
@@ -37,6 +39,7 @@ Examples:
 
 @Signin
 @Sad
+#1.3
 Scenario: Invalid email and password
 Given I am on the customer login page
 And I have the following credentials
@@ -46,8 +49,18 @@ And I enter these credentials
 When I click the sign in button 
 Then I should see an error message that contains "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later"
 
-# Forgotten Password 
 
+#@Signin
+#@Happy
+##1.4
+#Scenario: Request New Password
+
+#@Signin
+#@Happy
+##1.5
+#Scenario: Change Password
+
+# Forgotten Password 
 
 #Try Demo Customer Access
 
