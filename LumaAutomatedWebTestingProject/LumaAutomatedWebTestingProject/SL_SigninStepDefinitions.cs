@@ -4,6 +4,7 @@ using TechTalk.SpecFlow;
 namespace LumaAutomatedWebTestingProject
 {
     [Binding]
+    [Scope(Feature = "@Signin")]
     public class SL_SigninStepDefinitions
     {
         [Given(@"I am on the customer login page")]

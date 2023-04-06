@@ -1,21 +1,41 @@
+using LumaAutomatedWebTestingProject.lib.pages;
+using LumaAutomatedWebTestingProject.Utils;
+using OpenQA.Selenium.Chrome;
 using System;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace LumaAutomatedWebTestingProject.BDD
 {
     [Binding]
+    [Scope(Feature = @"CreateAccount")]
     public class CreateAccountStepDefinitions
     {
+        SL_Website<ChromeDriver> Sl_Website = new();
+
+        Credentials _credentials;
+
         [Given(@"I am on the create new customer account page")]
         public void GivenIAmOnTheCreateNewCustomerAccountPage()
         {
-            throw new PendingStepException();
+            Sl_Website.SeleniumDriver.Manage().Window.Maximize();
+
+            Sl_Website.SL_HomePage.VisitHomePage();
+
+            Sl_Website.SL_HomePage.CreateAccountButtonClick();
         }
 
-        [Given(@"I enter valid credentials")]
-        public void GivenIEnterValidCredentials(Table table)
+        [Given(@"I have the following valid credentials")]
+        public void GivenIHaveTheFollowingValidCredentials(Table table)
         {
-            throw new PendingStepException();
+            _credentials = table.CreateInstance<Credentials>();
+        }
+
+        [Given(@"I enter the credentials")]
+        public void GivenIEnterTheCredentials()
+        {
+            Sl_Website.SL_CreateAccountPage.EnterFirstNameTextBox(_credentials.Firstname);
+            Thread.Sleep(500);
         }
 
         [When(@"I click the create an account button")]
@@ -66,8 +86,9 @@ namespace LumaAutomatedWebTestingProject.BDD
             throw new PendingStepException();
         }
 
-        [Given(@"I enter the credentials with an Invalid Password")]
-        public void GivenIEnterTheCredentialsWithAnInvalidPassword(Table table)
+
+        [Given(@"I have the credentials with an Invalid Password")]
+        public void GivenIHaveTheCredentialsWithAnInvalidPassword(Table table)
         {
             throw new PendingStepException();
         }
