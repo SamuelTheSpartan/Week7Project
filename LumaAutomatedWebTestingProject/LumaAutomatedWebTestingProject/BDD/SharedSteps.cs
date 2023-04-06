@@ -1,4 +1,5 @@
 ﻿using LumaAutomatedWebTestingProject.lib.pages;
+using LumaAutomatedWebTestingProject.Utils;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,8 @@ namespace LumaAutomatedWebTestingProject.BDD
     public class SharedSteps
     {
         protected SL_Website<ChromeDriver> SL_Website { get; } = new();
+
+        protected Credentials? _credentials;
+
     }
 }
