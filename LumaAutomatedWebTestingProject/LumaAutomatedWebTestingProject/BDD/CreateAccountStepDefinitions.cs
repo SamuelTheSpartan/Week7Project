@@ -9,20 +9,20 @@ namespace LumaAutomatedWebTestingProject.BDD
 {
     [Binding]
     [Scope(Feature = @"CreateAccount")]
-    public class CreateAccountStepDefinitions
+    public class CreateAccountStepDefinitions : SharedSteps
     {
-        SL_Website<ChromeDriver> Sl_Website = new();
+        Random randomSeed = new Random();
 
         Credentials _credentials;
 
         [Given(@"I am on the create new customer account page")]
         public void GivenIAmOnTheCreateNewCustomerAccountPage()
         {
-            Sl_Website.SeleniumDriver.Manage().Window.Maximize();
+            SL_Website.SeleniumDriver.Manage().Window.Maximize();
 
-            Sl_Website.SL_HomePage.VisitHomePage();
+            SL_Website.SL_HomePage.VisitHomePage();
 
-            Sl_Website.SL_HomePage.CreateAccountButtonClick();
+            SL_Website.SL_HomePage.CreateAccountButtonClick();
         }
 
         [Given(@"I have the following valid credentials")]
@@ -34,20 +34,24 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Given(@"I enter the credentials")]
         public void GivenIEnterTheCredentials()
         {
-            Sl_Website.SL_CreateAccountPage.EnterFirstNameTextBox(_credentials.Firstname);
+            SL_Website.SL_CreateAccountPage.EnterFirstNameTextBox(_credentials.Firstname);
+            SL_Website.SL_CreateAccountPage.EnterLastNameTextBox(_credentials.Lastname);
+            SL_Website.SL_CreateAccountPage.EnterEmailTextBox(new RandomEmail().GenerateRandomEmail(randomSeed));
+            SL_Website.SL_CreateAccountPage.EnterPasswordTextBox(_credentials.Password);
+            SL_Website.SL_CreateAccountPage.EnterPasswordConfirmationTextBox(_credentials.Password);
             Thread.Sleep(500);
         }
 
         [When(@"I click the create an account button")]
         public void WhenIClickTheCreateAnAccountButton()
         {
-            throw new PendingStepException();
+            SL_Website.SL_CreateAccountPage.CreateAccountButtonClick();
         }
 
         [Then(@"I should land on the account page")]
         public void ThenIShouldLandOnTheAccountPage()
         {
-            throw new PendingStepException();
+            Assert.That(SL_Website.SeleniumDriver.Url, Is.EqualTo(AppConfigReader.AccountPageUrl));
         }
 
         [Given(@"I have entered a invalid First Name ""([^""]*)""")]
