@@ -27,5 +27,12 @@ namespace LumaAutomatedWebTestingProject.lib.pages
         }
 
         public void EnterFirstNameTextBox(string name) => _firstNameTextBox.SendKeys(name);
+        public void EnterLastNameTextBox(string name) => _lastNameTextBox.SendKeys(name);
+        public void EnterEmailTextBox(string email) => _emailTextBox.SendKeys(email);
+        public void EnterPasswordTextBox(string password) => _passwordTextBox.SendKeys(password);
+        public void EnterPasswordConfirmationTextBox(string passwordConfirm) => _passwordConfirmTextBox.SendKeys(passwordConfirm);
+        public void CreateAccountButtonClick() => _createAccountButton.Click();
+        public string ErrorMessageText() => _errorMessageBox.Text;
+        public string PasswordErrorMessageText() => _passwordErrorMessageBox.Text;
     }
 }
