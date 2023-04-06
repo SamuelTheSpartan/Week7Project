@@ -14,6 +14,7 @@ namespace LumaAutomatedWebTestingProject.lib.pages
         public SL_HomePage(IWebDriver driver)
         {
             _seleniumDriver = driver;
+            
         }
 
         public void VisitHomePage() => _seleniumDriver.Navigate().GoToUrl(_homePageUrl);
