@@ -193,13 +193,8 @@ testRunner.Given("I am on the customer login page", ((string)(null)), ((TechTalk
                 table3.AddRow(new string[] {
                             "fakeusername",
                             "password"});
-<<<<<<< HEAD
-#line 42
-testRunner.And("I have the following credentials", ((string)(null)), table3, "And ");
-=======
 #line 45
-testRunner.And("I have the following credentials", ((string)(null)), table1, "And ");
->>>>>>> 69b0b638f527c72caee920e4837f2e0e38bf65eb
+testRunner.And("I have the following credentials", ((string)(null)), table3, "And ");
 #line hidden
 #line 48
 testRunner.And("I enter these credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
