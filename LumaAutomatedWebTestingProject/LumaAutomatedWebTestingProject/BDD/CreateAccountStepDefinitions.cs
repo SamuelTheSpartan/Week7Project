@@ -51,7 +51,9 @@ namespace LumaAutomatedWebTestingProject.BDD
         [Then(@"I should land on the account page")]
         public void ThenIShouldLandOnTheAccountPage()
         {
+
             Assert.That(SL_Website.SeleniumDriver.Url, Is.EqualTo("https://magento.softwaretestingboard.com/customer/account/"));
+
         }
 
         [Given(@"I have the credentials with an Invalid Password")]

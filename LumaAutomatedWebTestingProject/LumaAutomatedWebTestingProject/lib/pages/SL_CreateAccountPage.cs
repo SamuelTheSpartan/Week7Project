@@ -17,11 +17,12 @@ namespace LumaAutomatedWebTestingProject.lib.pages
         private IWebElement _passwordTextBox => _seleniumDriver.FindElement(By.Id("password"));
         private IWebElement _passwordConfirmTextBox => _seleniumDriver.FindElement(By.Id("password-confirmation"));
         private IWebElement _errorMessageBox => _seleniumDriver.FindElement(By.CssSelector(".message-error > div"));
+
         private IWebElement _passwordErrorMessageBox => _seleniumDriver.FindElement(By.Id("password-error"));
 
         private IWebElement _createAccountButton => _seleniumDriver.FindElement(By.CssSelector(".submit > span"));
 
-        public SL_CreateAccountPage(IWebDriver seleniumDriver) 
+        public SL_CreateAccountPage(IWebDriver seleniumDriver)
         {
             _seleniumDriver = seleniumDriver;
         }
@@ -35,4 +36,5 @@ namespace LumaAutomatedWebTestingProject.lib.pages
         public string ErrorMessageText() => _errorMessageBox.Text;
         public string PasswordErrorMessageText() => _passwordErrorMessageBox.Text;
     }
+    
 }

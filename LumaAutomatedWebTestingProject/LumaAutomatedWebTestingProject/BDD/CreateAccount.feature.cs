@@ -35,8 +35,8 @@ namespace LumaAutomatedWebTestingProject.BDD
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD", "CreateAccount", "In order to login to an account\r\nAs an unregistered user of the Luma website\r\nI w" +
-                    "ant to be able to create an new account", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD", "CreateAccount", "In order to login to an account\nAs an unregistered user of the Luma website\nI wan" +
+                    "t to be able to create an new account", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
