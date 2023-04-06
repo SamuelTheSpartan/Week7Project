@@ -28,7 +28,7 @@ namespace LumaAutomatedWebTestingProject.BDD
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Login.feature"
+#line 1 "SL_Signin.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
@@ -174,7 +174,7 @@ testRunner.Then("I should see an error message that contains \"The account sign-
                     "Sad"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid email and password", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 43
+#line 42
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -184,25 +184,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 44
+#line 43
 testRunner.Given("I am on the customer login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "UserName",
+                            "Email",
                             "Password"});
                 table3.AddRow(new string[] {
                             "fakeusername",
                             "password"});
-#line 45
+#line 44
 testRunner.And("I have the following credentials", ((string)(null)), table3, "And ");
 #line hidden
-#line 48
+#line 47
 testRunner.And("I enter these credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
+#line 48
 testRunner.When("I click the sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 49
 testRunner.Then("I should see an error message that contains \"The account sign-in was incorrect or" +
                         " your account is disabled temporarily. Please wait and try again later\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
