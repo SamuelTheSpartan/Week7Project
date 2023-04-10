@@ -145,5 +145,12 @@ namespace LumaAutomatedWebTestingProject
             Thread.Sleep(3000);
             Assert.That(SL_Website.SL_InventoryPage.CheckUrl(), Does.Contain("Shopping Cart"));
         }
+
+        [AfterScenario]
+        public void ShutDown()
+        {
+            SL_Website.SeleniumDriver.Manage().Cookies.DeleteAllCookies();
+            SL_Website.SeleniumDriver.Quit();
+        }
     }
 }
