@@ -35,8 +35,8 @@ namespace LumaAutomatedWebTestingProject.BDD
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD", "InventoryPage", " As a registered user \n I want to be able to add items to the cart and checkout m" +
-                    "y items \n so that I can buy items", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD", "InventoryPage", " As a registered user \r\n I want to be able to add items to the cart and checkout " +
+                    "my items \r\n so that I can buy items", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
