@@ -12,7 +12,7 @@ namespace LumaAutomatedWebTestingProject.lib.driver_config
     public class SeleniumDriverConfig<T> where T : IWebDriver, new()
     {
         public IWebDriver Driver { get; set; }
-        public SeleniumDriverConfig(int pageLoadInsecs, int implicitWaitInSecs, bool isHeadless)
+        public SeleniumDriverConfig(int pageLoadInsecs, int implicitWaitInSecs, bool isHeadless = true)
         {
             Driver = new T();
             DriverSetUp(pageLoadInsecs, implicitWaitInSecs, isHeadless);

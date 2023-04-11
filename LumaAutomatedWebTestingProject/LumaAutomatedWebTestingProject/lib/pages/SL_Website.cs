@@ -18,7 +18,7 @@ namespace LumaAutomatedWebTestingProject.lib.pages
 
         #endregion
 
-        public SL_Website(int pageLoadInSecs = 10, int implicitlyWaitInSecs = 10, bool isHeadless = false)
+        public SL_Website(int pageLoadInSecs = 10, int implicitlyWaitInSecs = 10, bool isHeadless = true)
         {
             SeleniumDriver = new SeleniumDriverConfig<T>(pageLoadInSecs, implicitlyWaitInSecs, isHeadless).Driver;
             SL_HomePage = new SL_HomePage(SeleniumDriver);
