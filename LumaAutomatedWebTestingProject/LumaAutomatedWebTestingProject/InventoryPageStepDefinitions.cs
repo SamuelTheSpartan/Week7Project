@@ -139,7 +139,7 @@ namespace LumaAutomatedWebTestingProject
             SL_Website.SL_InventoryPage.ClickViewAndEditCartButton();
         }
 
-        [Then(@"I should be taken to the SHopping Cart Page")]
+        [Then(@"I should be taken to the Shopping Cart Page")]
         public void ThenIShouldBeTakenToTheShoppingCartPage()
         {
             Thread.Sleep(3000);
