@@ -140,7 +140,7 @@ namespace LumaAutomatedWebTestingProject
         }
 
         [Then(@"I should be taken to the SHopping Cart Page")]
-        public void ThenIShouldBeTakenToTheSHoppingCartPage()
+        public void ThenIShouldBeTakenToTheShoppingCartPage()
         {
             Thread.Sleep(3000);
             Assert.That(SL_Website.SL_InventoryPage.CheckUrl(), Does.Contain("Shopping Cart"));
