@@ -75,31 +75,17 @@ namespace LumaAutomatedWebTestingProject.BDD
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4.1 When I select my size, colour and quantity the item(s) should be added to the" +
-            " cart")]
+        [NUnit.Framework.DescriptionAttribute("The item should be added to the cart after I selected my colour and size")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        [NUnit.Framework.TestCaseAttribute("option-label-color-93-item-49", "option-label-size-143-item-166", null)]
-        [NUnit.Framework.TestCaseAttribute("option-label-color-93-item-50", "option-label-size-143-item-167", null)]
-        [NUnit.Framework.TestCaseAttribute("option-label-color-93-item-56", "option-label-size-143-item-168", null)]
-        [NUnit.Framework.TestCaseAttribute("option-label-color-93-item-56", "option-label-size-143-item-169", null)]
-        [NUnit.Framework.TestCaseAttribute("option-label-color-93-item-56", "option-label-size-143-item-170", null)]
-        public void _4_1WhenISelectMySizeColourAndQuantityTheItemSShouldBeAddedToTheCart(string colour, string size, string[] exampleTags)
+        public void TheItemShouldBeAddedToTheCartAfterISelectedMyColourAndSize()
         {
-            string[] @__tags = new string[] {
+            string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("colour", colour);
-            argumentsOfScenario.Add("size", size);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.1 When I select my size, colour and quantity the item(s) should be added to the" +
-                    " cart", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The item should be added to the cart after I selected my colour and size", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 14
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -109,74 +95,37 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
- testRunner.Given("I am on an item\'s page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+ testRunner.Given("I am on the item\'s page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
- testRunner.And(string.Format("I pick a {0}", colour), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+ testRunner.And("I pick black as my colour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
- testRunner.And(string.Format("I pick a {0}", size), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.And("I pick XS as my size", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
- testRunner.And("I pick a quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
+#line 18
  testRunner.When("I click the Add to Cart Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 15
- testRunner.Then("the item(s) should be added to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
+ testRunner.Then("I should be able to add an item to my shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4.2 Does the basket item limit work")]
-        [NUnit.Framework.CategoryAttribute("BasketOverflow")]
-        [NUnit.Framework.CategoryAttribute("Happy")]
-        public void _4_2DoesTheBasketItemLimitWork()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "BasketOverflow",
-                    "Happy"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.2 Does the basket item limit work", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 33
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 34
-    testRunner.Given("I have less than or equal to 10000 items in the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 35
-    testRunner.When("I add 1 or more items to basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 36
-    testRunner.Then("I should see an error message that contains \"The requested qty is not available\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4.3 The Cart Icon should bring up a menu with my Cart items")]
+        [NUnit.Framework.DescriptionAttribute("Testing the item limit on the basket")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void _4_3TheCartIconShouldBringUpAMenuWithMyCartItems()
+        public void TestingTheItemLimitOnTheBasket()
         {
             string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.3 The Cart Icon should bring up a menu with my Cart items", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 43
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing the item limit on the basket", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -186,34 +135,70 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 44
+#line 31
+    testRunner.Given("I am on the basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 32
+    testRunner.When("I change the quantity to 9858", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 33
+ testRunner.And("I click update the shopping cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 34
+    testRunner.Then("I should see an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The Cart Icon should bring up a menu with my Cart items")]
+        [NUnit.Framework.CategoryAttribute("InventoryPage")]
+        [NUnit.Framework.CategoryAttribute("Happy")]
+        public void TheCartIconShouldBringUpAMenuWithMyCartItems()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "InventoryPage",
+                    "Happy"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Cart Icon should bring up a menu with my Cart items", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 42
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 43
  testRunner.Given("I am on the inventory page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 45
+#line 44
  testRunner.When("I click the Cart Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 45
  testRunner.Then("a menu should show up with a proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 47
- testRunner.And("it should include the items in the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4.4 The Proceed to checkout button should work")]
+        [NUnit.Framework.DescriptionAttribute("The Proceed to checkout button should bring me to the checkout shipping address p" +
+            "age")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void _4_4TheProceedToCheckoutButtonShouldWork()
+        public void TheProceedToCheckoutButtonShouldBringMeToTheCheckoutShippingAddressPage()
         {
             string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.4 The Proceed to checkout button should work", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 54
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Proceed to checkout button should bring me to the checkout shipping address p" +
+                    "age", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 49
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -223,16 +208,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 55
-testRunner.Given("The basket is not empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 50
+testRunner.Given("I have added an item to the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 56
+#line 51
 testRunner.And("I am on the Cart List", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 52
 testRunner.When("I click the Proceed to Checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 58
+#line 53
 testRunner.Then("I should be taken to the Checkout Shipping Address Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -240,17 +225,17 @@ testRunner.Then("I should be taken to the Checkout Shipping Address Page", ((str
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4.5 The View and Edit Cart button should work")]
+        [NUnit.Framework.DescriptionAttribute("The View and Edit Cart button bring me to the shopping cart page")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void _4_5TheViewAndEditCartButtonShouldWork()
+        public void TheViewAndEditCartButtonBringMeToTheShoppingCartPage()
         {
             string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.5 The View and Edit Cart button should work", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 67
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The View and Edit Cart button bring me to the shopping cart page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 62
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -260,17 +245,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 68
-testRunner.Given("The basket is not empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 63
+testRunner.Given("I have added an item to the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 69
+#line 64
 testRunner.And("I am on the Cart List", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 70
+#line 65
 testRunner.When("I click the View and Edit Cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
-testRunner.Then("I should be taken to the SHopping Cart Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 66
+testRunner.Then("I should be taken to the Shopping Cart Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
