@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: [ "Lucas440-patch-1" ]
 
+defaults:
+  run:
+    working-directory: ./Week7Project
+
 jobs:
   build:
 
