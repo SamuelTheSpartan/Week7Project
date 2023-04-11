@@ -28,7 +28,7 @@ Given I am on the customer login page
 And I have entered a valid e-mail
 And I have entered a invalid password of "<passwords>"
 When I click the sign in button 
-Then I should see an error message that contains "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later"
+Then I should see an error message that contains "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
 Examples: 
 | passwords |
 | wrong     |
@@ -43,10 +43,12 @@ Scenario: Invalid email and password
 Given I am on the customer login page
 And I have the following credentials
 | Email        | Password |
-| fakeusername    | password |
+| chil@hotmail.com    | password |
 And I enter these credentials
 When I click the sign in button 
 Then I should see an error message that contains "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later"
+
+
 
 
 #@Signin

@@ -157,7 +157,7 @@ testRunner.When("I click the sign in button", ((string)(null)), ((TechTalk.SpecF
 #line hidden
 #line 31
 testRunner.Then("I should see an error message that contains \"The account sign-in was incorrect or" +
-                        " your account is disabled temporarily. Please wait and try again later\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                        " your account is disabled temporarily. Please wait and try again later.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -191,7 +191,7 @@ testRunner.Given("I am on the customer login page", ((string)(null)), ((TechTalk
                             "Email",
                             "Password"});
                 table3.AddRow(new string[] {
-                            "fakeusername",
+                            "chil@hotmail.com",
                             "password"});
 #line 44
 testRunner.And("I have the following credentials", ((string)(null)), table3, "And ");
