@@ -1,9 +1,8 @@
-using LumaAutomatedWebTestingProject.BDD;
 using OpenQA.Selenium;
 using System;
 using TechTalk.SpecFlow;
 
-namespace LumaAutomatedWebTestingProject
+namespace LumaAutomatedWebTestingProject.BDD
 {
     [Binding]
     [Scope(Feature = @"InventoryPage")]
