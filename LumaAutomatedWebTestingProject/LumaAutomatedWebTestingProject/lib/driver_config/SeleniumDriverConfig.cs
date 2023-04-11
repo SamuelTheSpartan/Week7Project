@@ -32,7 +32,9 @@ namespace LumaAutomatedWebTestingProject.lib.driver_config
             if (Driver is ChromeDriver)
             {
                 ChromeOptions options = new ChromeOptions();
-                options.AddArgument("headless");
+                options.AddArgument("--no-sandbox");
+                options.AddArgument("--disable-dev-shm-usage");
+                options.AddArgument("--headless");
                 Driver = new ChromeDriver(options);
             }
             else if (Driver is FirefoxDriver)
