@@ -115,16 +115,16 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Does the basket item limit work")]
+        [NUnit.Framework.DescriptionAttribute("Testing the item limit on the basket")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void DoesTheBasketItemLimitWork()
+        public void TestingTheItemLimitOnTheBasket()
         {
             string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Does the basket item limit work", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing the item limit on the basket", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -186,16 +186,18 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The Proceed to checkout button should work")]
+        [NUnit.Framework.DescriptionAttribute("The Proceed to checkout button should bring me to the checkout shipping address p" +
+            "age")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void TheProceedToCheckoutButtonShouldWork()
+        public void TheProceedToCheckoutButtonShouldBringMeToTheCheckoutShippingAddressPage()
         {
             string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Proceed to checkout button should work", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Proceed to checkout button should bring me to the checkout shipping address p" +
+                    "age", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 49
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -223,16 +225,16 @@ testRunner.Then("I should be taken to the Checkout Shipping Address Page", ((str
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The View and Edit Cart button should work")]
+        [NUnit.Framework.DescriptionAttribute("The View and Edit Cart button bring me to the shopping cart page")]
         [NUnit.Framework.CategoryAttribute("InventoryPage")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void TheViewAndEditCartButtonShouldWork()
+        public void TheViewAndEditCartButtonBringMeToTheShoppingCartPage()
         {
             string[] tagsOfScenario = new string[] {
                     "InventoryPage",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The View and Edit Cart button should work", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The View and Edit Cart button bring me to the shopping cart page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 62
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -253,7 +255,7 @@ testRunner.And("I am on the Cart List", ((string)(null)), ((TechTalk.SpecFlow.Ta
 testRunner.When("I click the View and Edit Cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 66
-testRunner.Then("I should be taken to the SHopping Cart Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be taken to the Shopping Cart Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
