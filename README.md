@@ -4,8 +4,8 @@
 
 ## This is a web testing project on [the Luma software testing website](https://magento.softwaretestingboard.com/) that utilises Selenium, Specflow, Accessibility Testing and Exploratory Testing.
 
-🥅 [Testing Aims](#🥅-testing-aims) | 🎉️ [Epics](#🎉️-epics) | 🏷 [Class Diagram](#🏷-class-diagram) | 🚢 [Exploratory Testing](#🚢-exploratory-testing) |
-🗺 [Accessibility Testing](#🗺-accessibility-testing) | ❌ [Defect Reports](#❌-defects-reports) |
+🥅 [Testing Aims](#🥅-testing-aims) | 🎉️ [Epics](#🎉️-epics) | 🏷 [Class Diagram](#🏷-class-diagram) | 🚢 [Exploratory Testing](#🚢-exploratory-testing) | <br>
+🗺 [Accessibility Testing](#🗺-accessibility-testing) | ❌ [Defect Reports](#❌-defects-reports) | <br>
 💭 [Definitions of Done and Ready](#💭-definitions-of-done-and-ready) | 📝 [Project Board](#📝-project-board) | 🤺 [Contributors](#🤺-contributors)
 
 ---
@@ -53,7 +53,13 @@ The testing aims of this project are...
 </details>
 <br>
 
-### 🏷 Class Diagram
+
+### 🏷 Class Diagrams and Test Framework
+
+<details>
+<summary>Test Framework</summary>
+<img src="./readme_assets/framework.png" alt="Our Testing Framework" width="1000">
+</details>
 
 <details>
 <summary>A Class Diagram for Automated Test Functions</summary>
@@ -99,13 +105,3 @@ Our definitions of Done and Ready [can be found here](./Defintions%20of%20Done%2
 Samuel Burton, Lucas Brennan, Man Him Yeung, Glen Smith, Gharzay Wali, Ali Cengiz, Suheyb Adam, Cormac Porter, Kevin Conceicao
 
 ---
-
-[The Project Website](https://magento.softwaretestingboard.com/)
-
-[Project Board](https://github.com/users/SamuelTheSpartan/projects/1/views/1)
-
-### Other deliverables
-
-* [ ] A README.md that includes all your documentation of what you have tested and how to run your test framework. Should also include how to use and extend your framework
-* [ ] Using GitHub collaboratively
-* [ ] Present your work at 9.30am on Wednesday 12th April (everyone in the group must partake – treat like a final presentation)
